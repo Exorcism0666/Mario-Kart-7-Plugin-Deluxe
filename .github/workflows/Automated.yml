@@ -14,14 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Go to the "plugin" folder
-        run: cd plugin
-
-      - name: Go to the "plugin" folder
-        run: ls -a
-
-      - name: Build Plugin
-        run: make
+      - name: Build + Upload Plugin
+        run: |
+          cd plugin
+          make
 
       - name: Upload Plugin
         uses: actions/upload-artifact@v3
