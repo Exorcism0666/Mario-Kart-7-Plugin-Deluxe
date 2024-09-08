@@ -17,7 +17,7 @@ jobs:
       - name: Build + Upload Plugin
         run: |
           cd plugin
-          make
+          make re
 
       - name: Upload Plugin
         uses: actions/upload-artifact@v3
