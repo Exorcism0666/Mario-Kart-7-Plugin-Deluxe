@@ -15,6 +15,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Go to the "plugin" folder
+        run: cd plugin
+
+      - name: Go to the "plugin" folder
         run: ls -a
 
       - name: Build Plugin
@@ -23,5 +26,5 @@ jobs:
       - name: Upload Plugin
         uses: actions/upload-artifact@v3
         with:
-          name: mk7-pid-grabber.3gx
-          path: mk7-pid-grabber.3gx
+          name: plugin.3gx
+          path: plugin.3gx
